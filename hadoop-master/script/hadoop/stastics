@@ -1,0 +1,24 @@
+[root@node2 ~]# hdfs dfs -du /user/hive/warehouse/out.db/mlc_main_client2/                                                                                          
+0          /user/hive/warehouse/out.db/mlc_main_client2/.impala_insert_staging                                                                                          
+42012837   /user/hive/warehouse/out.db/mlc_main_client2/citycode=901                                                                                                    
+31614607   /user/hive/warehouse/out.db/mlc_main_client2/citycode=902                                                                                                    
+17722717   /user/hive/warehouse/out.db/mlc_main_client2/citycode=903
+21113275   /user/hive/warehouse/out.db/mlc_main_client2/citycode=904
+10457822   /user/hive/warehouse/out.db/mlc_main_client2/citycode=905
+20527568   /user/hive/warehouse/out.db/mlc_main_client2/citycode=906
+100854936  /user/hive/warehouse/out.db/mlc_main_client2/citycode=907
+52242483   /user/hive/warehouse/out.db/mlc_main_client2/citycode=908
+30489326   /user/hive/warehouse/out.db/mlc_main_client2/citycode=909
+10857084   /user/hive/warehouse/out.db/mlc_main_client2/citycode=910
+22656195   /user/hive/warehouse/out.db/mlc_main_client2/citycode=911
+4756740    /user/hive/warehouse/out.db/mlc_main_client2/citycode=912
+19463584   /user/hive/warehouse/out.db/mlc_main_client2/citycode=913
+55811305   /user/hive/warehouse/out.db/mlc_main_client2/citycode=914
+71106257   /user/hive/warehouse/out.db/mlc_main_client2/citycode=915
+89245902   /user/hive/warehouse/out.db/mlc_main_client2/citycode=916
+50267856   /user/hive/warehouse/out.db/mlc_main_client2/citycode=917
+[root@node2 ~]# hdfs dfs -du /user/hive/warehouse/out.db/
+972265089  /user/hive/warehouse/out.db/mlc_main_client
+651200494  /user/hive/warehouse/out.db/mlc_main_client2
+177        /user/hive/warehouse/out.db/t
+

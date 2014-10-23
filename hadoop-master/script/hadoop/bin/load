@@ -1,0 +1,22 @@
+hdfs dfs -put gcassuremain.del /tmp/mydata/gcassuremain/
+hdfs dfs -put miloancard.del /tmp/mydata/miloancard/
+hdfs dfs -put gcassuremulticlient.del /tmp/mydata/gcassuremulticlient/
+hdfs dfs -put employee.del /tmp/mydata/employee/
+hdfs dfs -put organization.del /tmp/mydata/organization/
+hdfs dfs -put param_class.del /tmp/mydata/param_class/
+hdfs dfs -put pmparamrelation.del /tmp/mydata/pmparamrelation/
+hdfs dfs -put XCRMS_GROUPRELATION.del /tmp/mydata/XCRMS_GROUPRELATION/
+hdfs dfs -put grouptype.del /tmp/mydata/grouptype/
+
+
+
+cp /mnt/disk0/mydata/gcassuremain.del ./data/gcassuremain.del
+cp /mnt/disk0/mydata/miloancard.del ./data/miloancard.del
+cp /mnt/disk0/mydata/gcassuremulticlient.del ./data/gcassuremulticlient.del
+cp /mnt/disk0/mydata/employee.del ./data/employee.del
+cp /mnt/disk0/mydata/organization.del ./data/organization.del
+cp /mnt/disk0/mydata/param_class.del ./data/param_class.del
+cp /mnt/disk0/mydata/pmparamrelation.del ./data/pmparamrelation.del
+cp /mnt/disk0/mydata/XCRMS_GROUPRELATION.del ./data/XCRMS_GROUPRELATION.del
+cp /mnt/disk0/mydata/grouptype.del ./data/grouptype.del
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase151 where citycode='$1' and busimanager='$2' and pdeptcode='$3' and loanaccount like '$4%' order by contractmoney,loandate,balamt,money desc limit $5"
+

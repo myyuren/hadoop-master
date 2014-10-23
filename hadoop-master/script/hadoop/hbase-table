@@ -1,0 +1,9 @@
+CREATE TABLE mlc_main_client_hbase
+ row format delimited fields terminated by '\t'
+ stored as textfile
+as 
+select concat(
+lpad(cast(contractmoney as string), 9, '0'), '-', loandate, '-', 
+lpad(cast(BALAMT as string), 9, '0'), '-',
+lpad(cast(1000000000-money as string), 9, '0')
+) key, * from mlc_main_client;

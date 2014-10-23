@@ -1,0 +1,21 @@
+﻿create database if not exists out;
+#1、台账——贷款卡片(MILOANCARD)
+
+
+    
+    
+ 2、GC担保信息表(GCASSUREMAIN)
+
+    3、GC从合同多方信息表(GCASSUREMULTICLIENT)
+
+    
+    4、机构上下级关系表(XCRMS_GROUPRELATION)
+
+    
+    4、参数关系(PMPARAMRELATION)
+
+    
+    5、参数字典基本信息表(PARAM_CLASS)
+
+impala中刷metadata
+ invalidate metadata

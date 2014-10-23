@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select count(distinct custid) cust_num from process.hbase131 where FLOATRATE >= $1 and FLOATRATE <= $2;select sum(contractmoney) contractmoney from (select distinct contractno, contractmoney from process.hbase131 where FLOATRATE >= $1 and FLOATRATE <= $2) c;select COUNT(busicode) busi_num,SUM(money) money,SUM(balAmt) balAmt,SUM(CASE WHEN paydebt IS NULL THEN 0 ELSE paydebt END) payDebt, SUM(inDebtAmt) inDebtAmt, SUM(outDebtAmt) outDebtAmt from process.hbase131 where FLOATRATE >= $1 and FLOATRATE <= $2;"
+

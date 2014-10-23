@@ -1,0 +1,18 @@
+disable 'hbase331'
+drop 'hbase331'
+disable 'hbase332'
+drop 'hbase332'
+disable 'hbase342'
+drop 'hbase342'
+disable 'hbase341'
+drop 'hbase341'
+disable 'hbase351'
+drop 'hbase351'
+disable 'hbase352'
+drop 'hbase352'
+disable 'hbase361'
+drop 'hbase361'
+disable 'hbase362'
+drop 'hbase362'
+exit
+

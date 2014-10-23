@@ -1,0 +1,12 @@
+  select count(*) from (
+  SELECT
+   distinct mlc.busicode
+  FROM
+    miloancard mlc,
+          GCASSUREMAIN main,
+          GCASSUREMULTICLIENT client
+  WHERE
+    mlc.deptCode in (SELECT LOWGROUPID FROM XCRMS_GROUPRELATION WHERE UPGROUPID= '000000')
+    AND mlc.CONTRACTNO = main.UPKEYCODE
+    AND client.keycode = main.keycode
+    ) c;

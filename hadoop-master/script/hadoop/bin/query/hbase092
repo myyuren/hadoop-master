@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select sum(cust_num) cust_num, sum(busi_num) busi_num, sum(contractmoney) contractmoney, sum(money) money, sum(balamt) balamt, sum(paydebt) paydebt, sum(indebtamt) indebtamt, sum(outdebtamt) outdebtamt from process.hbase092 where key in ($1)"
+

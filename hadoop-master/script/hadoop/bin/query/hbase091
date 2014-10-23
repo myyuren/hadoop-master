@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase091 where groupid='$1' and pfiveclass in ($2) limit $3"
+

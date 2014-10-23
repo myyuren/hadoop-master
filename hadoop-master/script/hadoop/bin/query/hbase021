@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase021 where citycode='$1' and groupid='$2' order by contractmoney,loandate,balamt,money desc limit $3"
+

@@ -1,0 +1,6 @@
+<configuration>
+	<property>
+		<name>dfs.permissions.superusergroup</name>
+		<value>hadoop</value>
+	</property>
+</configuration>

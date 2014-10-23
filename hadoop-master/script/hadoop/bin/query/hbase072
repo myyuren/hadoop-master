@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select cust_num, busi_num, contractmoney, money, balamt, paydebt, indebtamt, outdebtamt from process.hbase072 where key='$1'"
+

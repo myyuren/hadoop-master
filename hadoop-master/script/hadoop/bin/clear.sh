@@ -1,0 +1,2 @@
+rm *.sh~ *.sql~ *~ query/*~
+

@@ -1,0 +1,20 @@
+  SELECT
+    COUNT(custid) cust_num,
+    COUNT(busicode) busi_num,
+    SUM(
+        CASE
+            WHEN conseq=1
+            THEN contractmoney
+            ELSE 0
+        END) contractmoney,
+    SUM(money) money,
+    SUM(balAmt) balAmt,
+    SUM(
+        CASE
+            WHEN paydebt IS NULL
+            THEN 0
+            ELSE paydebt
+        END) payDebt,
+    SUM(inDebtAmt) inDebtAmt,
+    SUM(outDebtAmt) outDebtAmt
+  FROM mlc_main_client2

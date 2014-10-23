@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase101 where groupid='$1' and paccountstate in ($2) limit $3"
+

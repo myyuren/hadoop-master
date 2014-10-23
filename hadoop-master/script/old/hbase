@@ -1,0 +1,7 @@
+create table hbasecity(rowkey string, cname string, currency string);
+insert overwrite hbasecity values
+("0200A00000001", "zhangbo1", "rbm"),
+("0200A00000002", "zhangbo2", "rbm"),
+("0200B00000001", "zhangbo3", "rbm");
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=HBASE_ROW_KEY,d:cname,d:currency -Dimporttsv.bulk.output=hdfs://192.168.0.1/tmpout/ hbasetable hdfs://192.168.0.1/user/hive/warehouse/hbasecity/cd47052ba7bd8199-150724fd446cacbc_2103375961_data.0
+hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles hdfs://192.168.0.1/out/ hbasetable

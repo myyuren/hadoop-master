@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase131 where floatrate >= 1.02 and floatrate <= 105.6874 order by contractmoney,loandate,balamt,money limit 1000"
+

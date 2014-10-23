@@ -1,0 +1,53 @@
+﻿1.执行了 hive建表语句
+2.上传数据到hdfs
+ hdfs dfs -put /mnt/disk0/mydata/gcassuremain.del /tmp/data/gcassuremain
+ hdfs dfs -put /mnt/disk0/mydata/gcassuremainout.del /tmp/data/gcassuremain
+ 
+ hdfs dfs -put /mnt/disk0/mydata/miloancard.del /tmp/data/miloancard
+ hdfs dfs -put /mnt/disk0/mydata/miloancardout.del /tmp/data/miloancard
+ 
+ hdfs dfs -put /mnt/disk0/mydata/gcassuremulticlient.del /tmp/data/gcassuremulticlient
+ hdfs dfs -put /mnt/disk0/mydata/gcassuremulticlientout.del /tmp/data/gcassuremulticlient
+ 
+ hdfs dfs -put /mnt/disk0/mydata/employee.del /tmp/data/employee
+ 
+ hdfs dfs -put /mnt/disk0/mydata/organization.del /tmp/data/organization 
+ 
+ hdfs dfs -put /mnt/disk0/mydata/param_class.del /tmp/data/param_class
+  
+ hdfs dfs -put /mnt/disk0/mydata/pmparamrelation.del /tmp/data/pmparamrelation
+ 
+ hdfs dfs -put /mnt/disk0/mydata/XCRMS_GROUPRELATION.del /tmp/data/XCRMS_GROUPRELATION
+ 
+3.处理空格数据
+su hdfs
+hadoop jar /mnt/disk0/mydata/huijin-mapreduce.jar cn.huijin.hadoop.mapreduce.PreData /tmp/data/miloancard /tmp/data/miloancard_output
+ 22min
+4.创建impala parquet表
+
+ create table report.gcassuremain like out.gcassuremain stored as parquet;
+ create table report.miloancard like out.miloancard stored as parquet;
+ create table report.gcassuremulticlient like out.gcassuremulticlient stored as parquet;
+ 
+  
+  
+ create table report.om_employee like out.om_employee stored as parquet;
+ create table report.organization like out.organization stored as parquet;
+ create table report.param_class like out.param_class stored as parquet;
+ create table report.pmparamrelation like out.pmparamrelation stored as parquet;
+ create table report.xcrms_grouprelation like out.xcrms_grouprelation stored as parquet;
+ 
+5.复制数据
+insert overwrite table report.gcassuremain select * from out.gcassuremain;
+insert overwrite table report.miloancard select * from out.miloancard;
+insert overwrite table report.gcassuremulticlient select * from out.gcassuremulticlient;
+insert overwrite table report.om_employee select * from out.om_employee;
+insert overwrite table report.organization select * from out.organization;
+insert overwrite table report.param_class select * from out.param_class;
+insert overwrite table report.pmparamrelation select * from out.pmparamrelation;
+insert overwrite table report.xcrms_grouprelation select * from out.xcrms_grouprelation;
+
+6.执行 分区表.txt
+
+
+7.加载分区数据.TXT。

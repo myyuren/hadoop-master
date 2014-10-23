@@ -1,0 +1,2 @@
+create table mlc_main_client_ordered stored as parquet as
+SELECT * from mlc_main_client order by CONTRACTMONEY ,LOANDATE ,BALAMT,MONEY desc;

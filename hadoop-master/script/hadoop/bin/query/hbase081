@@ -1,0 +1,4 @@
+#!/bin/bash
+
+impala-shell --quiet -i node2 -q "select * from process.hbase081 where groupid='$1' and pmainassure in ($2) order by contractmoney,loandate,balamt,money limit $3"
+
